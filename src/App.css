@@ -1,0 +1,19 @@
+.logoImage{
+  background-image: url("https://s3-alpha-sig.figma.com/img/4f6c/91fc/0378d5046e761b4e73cd10927b0e2ad2?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WmcFVF1fLrLY99UJc0NKF55cEnl7iYQGZi7ivTSqGz2zWNglZA1P1DVV6UL0SSD01v11ybgd2wiUfbNHawiMoHPa9AXUSO80j2Y4AX1NtNuJSWdUPxBNuHlxUrafFcshTXgAAP7C-GwwZE-aD5fyJ-skEO7~pXLrtEMza0tlydjyPE61ZRNS-k1pbBd3hu0lf4d6duRqwge0WIBRbNp0ZzWxoShUfQqEEQeXurDkPPF0Z46hkq-SmPtPLPl-vcSI68E9ttFwpN30iYAhr6vY2u6YFdjq0KoCJJUouADGLJJEPPiRjwSPqRDscikCZNPR3xR0PGRY2mkExHiD8bpUgw__");
+  background-size: cover;
+}
+
+.boxShadow{
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.459);
+}
+
+.boxScrollBar::-webkit-scrollbar{
+  visibility: hidden;
+  width: 8px;
+}
+.boxScrollBar:hover::-webkit-scrollbar-thumb{
+  visibility: visible;
+  background-color: rgba(128, 128, 128, 0.308);
+  border-radius: 8px;
+  
+}
