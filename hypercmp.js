@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
-// import fetch from 'node-fetch';
+import axios from 'axios';
 
  export class ConsentSDK {
     constructor(apiUrl) {
@@ -8,11 +8,10 @@ import {v4 as uuidv4} from 'uuid';
     }
 
     async #post(endpoint, data) {
-        // const res = await fetch(`${this.apiUrl}${endpoint}`, {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data),
-        // });
+        const res = await axios.post(`${this.apiUrl}${endpoint}`, {
+            headers: { 'Content-Type': 'application/json' },
+
+        });
         if (!res.ok) throw new Error((await res.json()).message);
         return res.json();
     }

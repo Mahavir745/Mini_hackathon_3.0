@@ -1,8 +1,13 @@
 import React from 'react'
+import { useOutletContext } from 'react-router-dom'
 
 const Token = () => {
+
+  const {HandleValid,validToken} = useOutletContext()
+
+
   return (
-    <div className='w-[503px] max-h-[745px]  mt-[40px] ml-[294px] boxShadow'>
+    <div className={`w-[503px] mt-[40px] ml-[294px] boxShadow rounded-md ${validToken? "h-[160px]":"h-[740px]"}`}>
       <div className='w-[100%] rounded-md  p-[32px]'>
         <div className='w-[439px] h-[92px] flex flex-col justify-between'>
           <div className='h-[36px]  flex justify-between items-center'>
@@ -10,10 +15,10 @@ const Token = () => {
             <input type="text" placeholder='Token value' className='w-[344px] h-auto border rounded-md pt-[5.5px] pr-[12px] pb-[5.5px] pl-[12px] ' />
           </div>
           <div className='h-[36px] border'>
-            <button className='text-white text-[12px] bg-violet-600 rounded w-[100%] h-[100%]'>Validate Token</button>
+            <button className='text-white text-[12px] bg-violet-600 rounded w-[100%] h-[100%]' onClick={HandleValid}>Validate Token</button>
           </div>
         </div>
-        <div className='w-[100%] mt-[36px] max-h-[549px] border-t-2 overflow-y-scroll boxScrollBar  '>
+        <div className={`w-[100%] mt-[36px] max-h-[549px] border-t-2 overflow-y-scroll boxScrollBar ${validToken? "hidden":"visible"}`}>
           <div className='flex justify-between mt-[32px]'>
             <p>Consent Status</p>
             <button className='w-[102px] h-[32px] border flex justify-evenly items-center pt-[6px] pr-[12px] pb-[6px] pl-[10px] text-green-800 bg-green-100 rounded-md'>
